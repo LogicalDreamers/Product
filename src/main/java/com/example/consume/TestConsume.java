@@ -19,7 +19,10 @@ public class TestConsume {
 		Product p=restTemplate.getForObject("http://localhost:9094/get/"+i,Product.class);
 		System.out.println("GET Cumsume  "+p);
 	
+<<<<<<< HEAD
 		
+=======
+>>>>>>> updated changes
 	}
 
 	/*private static void addProduct(Product product) 
