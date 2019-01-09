@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.exception.ProductNotFound;
 import com.example.model.Product;
 import com.example.serviceimpl.ProductServiceImpl;
 
@@ -40,9 +41,8 @@ public class ProductController {
 		 return product_service.getProduct();
 	}
 	@GetMapping("/get/{id}")
-	public Product test(@PathVariable(value = "id") int id)
+	public Product test(@PathVariable(value = "id") int id)throws ProductNotFound
 	{
-		
 		System.out.println("Controller "+id);
 		return product_service.findProduct(id);
 	}
