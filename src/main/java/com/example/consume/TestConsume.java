@@ -21,9 +21,9 @@ public class TestConsume {
 	
 	}
 
-	/*private static void addProduct(Product product) 
+	private static void addProduct(Product product) 
 	{
 		Product result = restTemplate.postForObject("http://localhost:9094/add",product,Product.class);
 		System.out.println("Consume POST "+result);
-	}*/
+	}
 }
