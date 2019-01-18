@@ -17,11 +17,12 @@ import com.example.exception.ProductNotFound;
 import com.example.model.Product;
 import com.example.serviceimpl.ProductServiceImpl;
 
+
 @RestController
 public class ProductController {
 	
 	@Autowired
-	ProductServiceImpl product_service;
+	ProductServiceImpl productService;
 	
 	@GetMapping("/")
 	public String test()
@@ -32,19 +33,19 @@ public class ProductController {
 	@PostMapping("/add")
 	public  String add(@RequestBody Product sch)
 	{
-		return product_service.addProduct(sch);
+		return productService.addProduct(sch);
 	}
 
 	@GetMapping("/gets")
 	public @ResponseBody List<Product> gets()
 	{
-		 return product_service.getProduct();
+		 return productService.getProduct();
 	}
 	@GetMapping("/get/{id}")
 	public Product test(@PathVariable(value = "id") int id)throws ProductNotFound
 	{
 		System.out.println("Controller "+id);
-		return product_service.findProduct(id);
+		return productService.findProduct(id);
 	}
 	// test PathParam and Request Parm
 	//http://localhost:9092/srno/1001/receipts?date=2017-12-05
