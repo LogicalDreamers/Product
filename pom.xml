@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot MVC CURD jsp</description>
 
 	<properties>
+		<start-class>ProductApplication</start-class>
 		<java.version>1.8</java.version>
 		<spring-boot-admin.version>2.1.1</spring-boot-admin.version>
 	</properties>
